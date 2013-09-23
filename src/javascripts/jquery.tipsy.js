@@ -113,6 +113,8 @@
                 this.$tip = $('<div class="tipsy"></div>').html('<div class="tipsy-arrow"></div><div class="tipsy-inner"></div>');
                 this.$tip.data('tipsy-pointee', this.$element[0]);
             }
+            var time =  Math.round((new Date()).getTime() / 10 % 1000000000);
+            this.$tip.css("z-index", time);
             return this.$tip;
         },
         
