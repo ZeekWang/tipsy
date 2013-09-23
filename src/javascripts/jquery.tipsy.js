@@ -37,6 +37,14 @@
                     width: this.$element[0].offsetWidth,
                     height: this.$element[0].offsetHeight
                 });
+
+                //if the element is SVG (g), reset width and height.
+                var svgElementTags = ['g', 'rect'];
+                if (svgElementTags.indexOf(this.$element[0].tagName) >= 0 ) {
+                    pos.width = $(this.$element[0]).attr("width") ? Number($(this.$element[0]).attr("width")) : 0;
+                    pos.height = $(this.$element[0]).attr("height") ? Number($(this.$element[0]).attr("height")) : 0;
+                }
+
                 
                 var actualWidth = $tip[0].offsetWidth,
                     actualHeight = $tip[0].offsetHeight,
