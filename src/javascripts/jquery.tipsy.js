@@ -3,6 +3,9 @@
 // (c) 2008-2010 jason frame [jason@onehackoranother.com]
 // released under the MIT license
 
+// Edited By Zeek Wang
+// 2010/10
+
 (function($) {
     
     function maybeCall(thing, ctx) {
